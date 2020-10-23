@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Input;
 
 
@@ -10,30 +11,23 @@ namespace UTF2_EJER8
         public MainWindow()
         {
             InitializeComponent();
+            nombreTextBox.Tag = nombreTextBlock;
+            ApellidosTextBox.Tag = apellidosTexBlock;
         }
 
-        private void nombreTextBox_KeyDown(object sender, KeyEventArgs e)
+        private void avisoTextBox_KeyDown(object sender, KeyEventArgs e)
         {
-           
+            TextBlock mensaje = (sender as TextBox).Tag as TextBlock;
 
             if (e.Key == Key.F1)
             { 
-                if (nombreTextBlock.Opacity==0)
-                    nombreTextBlock.Opacity = 1;
+                if (mensaje.Opacity==0)
+                    mensaje.Opacity = 1;
                 else             
-                    nombreTextBlock.Opacity = 0;
+                    mensaje.Opacity = 0;
             }
         }
-        private void apellidosTextBox_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.Key == Key.F1)
-            {
-                if (apellidosTexBlock.Opacity == 0)
-                    apellidosTexBlock.Opacity = 1;
-                else
-                    apellidosTexBlock.Opacity = 0;
-            }
-        }
+       
         private void edadTextBox_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.F2)

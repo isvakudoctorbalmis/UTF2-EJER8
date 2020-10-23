@@ -21,8 +21,7 @@
             Margin="252,128,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            Keyboard.KeyDown="nombreTextBox_KeyDown"
-            Tag="nombreTextblock"
+            Keyboard.KeyDown="avisoTextBox_KeyDown"            
             TextWrapping="Wrap" />
         <TextBlock
             Margin="252,107,0,0"
@@ -45,8 +44,8 @@
             Margin="252,208,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            Keyboard.KeyDown="apellidosTextBox_KeyDown"
-            TextWrapping="Wrap" />
+                 Keyboard.KeyDown="avisoTextBox_KeyDown"
+                 TextWrapping="Wrap" />
         <TextBlock
             Margin="252,264,0,0"
             HorizontalAlignment="Left"
